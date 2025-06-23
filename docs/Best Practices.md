@@ -117,7 +117,7 @@ Information logging will vary in each organization but should fall between the r
 - When did the process end
 
 ### Warning
-`logger.log_warn[ing]` should be used for non-critical system level / business logic issues that are actionable. If it is a critical issue than an error should be raised and `logger.log_error` should be called. An example would be when a non-critical configuration item is missing. In this case a warning message should be logged stating that the configuration option was not set / mssing and the deafult value that the code is using in place.
+`logger.log_warn[ing]` should be used for non-critical system level / business logic issues that are actionable. If it is a critical issue than an error should be raised and `logger.log_error` should be called. An example would be when a non-critical configuration item is missing. In this case a warning message should be logged stating that the configuration option was not set / missing and the default value that the code is using in place.
 
 ### Error
 `logger.log_error` should be used when a PL/SQL error has occurred. In most cases this is in an exception block. Regardless of any other configuration, `log_error` will store the callstack. Errors are considered actionalble items as an error has occurred and something (code, configuration, server down, etc) needs attention.
